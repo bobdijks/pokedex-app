@@ -52,3 +52,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # For API
 gem 'rest-client'
+
+# ENV Security
+gem 'dotenv-rails', groups: [:development, :test]
