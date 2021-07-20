@@ -2,14 +2,14 @@
 
 one:
   name: MyString
+  string: MyString
   type: 
-  description: MyText
   ability: MyString
   weight: 1
 
 two:
   name: MyString
+  string: MyString
   type: 
-  description: MyText
   ability: MyString
   weight: 1
