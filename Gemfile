@@ -55,3 +55,6 @@ gem 'rest-client'
 
 # ENV Security
 gem 'dotenv-rails', groups: [:development, :test]
+
+# Cloudinary image host
+gem 'cloudinary', '~> 1.16.0'
