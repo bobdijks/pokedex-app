@@ -2,14 +2,12 @@
 
 one:
   name: MyString
-  string: MyString
-  type: 
+  pokemon_type: MyString
   ability: MyString
   weight: 1
 
 two:
   name: MyString
-  string: MyString
-  type: 
+  pokemon_type: MyString
   ability: MyString
   weight: 1

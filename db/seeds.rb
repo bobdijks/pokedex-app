@@ -17,7 +17,7 @@ all_urls = pokemons['results']
   pokemon_array = JSON.parse(poke_info)
   Pokemon.create(
     name: pokemon_array['forms'][0]['name'],
-    type: pokemon_array['types'][0]['type']['name'],
+    pokemon_type: pokemon_array['types'][0]['type']['name'],
     ability: pokemon_array['abilities'][0]['ability']['name'],
     weight: pokemon_array['weight']
   )
