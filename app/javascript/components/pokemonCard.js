@@ -10,8 +10,8 @@ const PokemonCard = ({id, name, type, image }) => {
       </div>
       <img src={image} alt={name} />
       <div className="detail-wrapper">
-        <h2>{name}</h2>
-        <p>Pokétype: {type}</p>
+        <h3>{name}</h3>
+        <p>Type: {type}</p>
       </div>
     </div>
   )
