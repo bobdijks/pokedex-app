@@ -5,7 +5,7 @@ import PokemonCard from './pokemonCard';
 function App() {
 
 const [allPokemons, setAllPokemons] = useState([])
-const [loadMore, setLoadMore] = useState('api/v1/pokemons/?_limit=20')
+const [loadMore, setLoadMore] = useState('api/v1/pokemons/?limit=20')
 
 const getAllPokemons = async () => {
   const res = await fetch(loadMore)
@@ -13,8 +13,6 @@ const getAllPokemons = async () => {
   setAllPokemons(data)
   setLoadMore(data.next)
 }
-
-
 
 useEffect(() => {
   getAllPokemons()
@@ -24,7 +22,7 @@ console.log(allPokemons)
 
 return (
   <div className="app-container">
-    <h1>Welcome to Pokédex</h1>
+    <h1>WELCOME TO POKÉDEX</h1>
     <div className="index-container">
       <div className="pokemon-container">
           {allPokemons.map((pokemon, index) =>
