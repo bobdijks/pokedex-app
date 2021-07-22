@@ -31,8 +31,11 @@ return (
           <PokemonCard
           id={pokemon.id}
           name={pokemon.name}
-          image={pokemon.photo}
+          image={pokemon.photo_url}
           type={pokemon.pokemon_type}
+          ability={pokemon.ability}
+          height={pokemon.height}
+          weight={pokemon.weight}
           key={index}
           />
         )}
