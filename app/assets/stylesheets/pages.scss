@@ -8,7 +8,7 @@ body {
 
 .app-container {
   display: flex;
-  background: url('poke-wall.jpg');
+  background: url('pokeball.png');
   background-repeat: no-repeat;
   background-size: cover;
   flex-direction: column;
@@ -43,19 +43,19 @@ body {
   border-radius: 0.3rem;
   min-width: 160px;
   text-align: center;
-  box-shadow: 0 3px 10px #434d4a;
+  box-shadow: 0 3px 10px #212625;
 }
 
 h1 {
-  color: #434d4a;
-  text-shadow: 0 2px 2px #efefef;
+  color: #212625;
+  text-shadow: 1px 1px 1px #efefef;
 }
 
 h3 {
   margin-bottom: 0.2rem;
   font-size: 1.5rem;
   text-transform: capitalize;
-  color: #282828;
+  color: #212625;
 }
 
 .card-container .number {
@@ -78,7 +78,7 @@ h3 {
 .card-container p {
   text-transform: capitalize;
   font-weight: bold;
-  color: #282828;
+  color: #212625
 }
 
 .detail-wrapper {
@@ -99,9 +99,9 @@ h3 {
 }
 
 .load-more {
-  background: #434d4a;
+  background: #212625;
   border-radius: 0.2rem;
-  border: 2px solid #fafafa;
+  border: 1px solid #fafafa;
   font-weight: bolder;
   color: #fafafa;
   padding: 0.5rem 1.5rem;
@@ -110,7 +110,7 @@ h3 {
 }
 
 .load-more:hover {
-  background: #f04138;
+  background: #d22600;
   border-radius: 0.2rem;
 }
 
