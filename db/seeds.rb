@@ -22,8 +22,9 @@ puts 'Starting the big Pokemon seed'
     pokemon_type: pokemon_array['types'][0]['type']['name'],
     ability: pokemon_array['abilities'][0]['ability']['name'],
     weight: pokemon_array['weight'],
+    moves: pokemon_array['moves'][0]['move']['name'],
     photo_url: pokemon_array['sprites']['other']['dream_world']['front_default'],
-    height: pokemon_array['weight']
+    height: pokemon_array['height']
   )
 end
 

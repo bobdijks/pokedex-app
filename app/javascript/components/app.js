@@ -51,21 +51,15 @@ return (
                 name={pokemon.name}
                 image={pokemon.photo_url}
                 type={pokemon.pokemon_type}
-                ability={pokemon.ability}
-                height={pokemon.height}
-                weight={pokemon.weight}
                 key={index}
               />
             </FrontSide>
             <BackSide>
               <PokemonCardBack
-                id={pokemon.id}
-                name={pokemon.name}
-                image={pokemon.photo_url}
-                type={pokemon.pokemon_type}
                 ability={pokemon.ability}
                 height={pokemon.height}
                 weight={pokemon.weight}
+                moves={pokemon.moves}
                 key={index}
               />
             </BackSide>

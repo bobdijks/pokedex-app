@@ -1,7 +1,7 @@
 import React from 'react';
 import MyImage from 'images/small-ball.png'
 
-const PokemonCardBack = ({ ability, height, weight }) => {
+const PokemonCardBack = ({ ability, height, weight, moves }) => {
 
   const style = `card-container back`
   return (
@@ -9,6 +9,8 @@ const PokemonCardBack = ({ ability, height, weight }) => {
      <div className="detail-wrapper">
         <p className="back-p">Ability:</p>
         <p className="back-p">{ability}</p>
+        <p className="back-p">Move:</p>
+        <p className="back-p">{moves}</p>
         <p className="back-p">Height: {height}</p>
         <p className="back-p">Weight: {weight}</p>
         </div>
