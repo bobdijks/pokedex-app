@@ -6,9 +6,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+// Text and border colors
+$dark-grey: #212625;
+$light-grey: #efefef;
+
 h1 {
-  color: #efefef;
-  text-shadow: 1px 1px 1px #212625;
+  color: $light-grey;
+  text-shadow: 1px 1px 1px $dark-grey;
+}
+
+h3 {
+  color: #212625;
+  text-shadow: 0.2px 0.2px 0.2px $light-grey;
 }
 
 .app-container {
@@ -44,12 +53,12 @@ h1 {
   justify-content: center;
   padding: 1.5rem 0;
   margin: 0.5rem;
-  border: 0.15rem solid #efefef;
+  border: 0.15rem solid $light-grey;
   border-radius: 0.3rem;
   min-width: 160px;
   height: 100%;
   text-align: center;
-  box-shadow: 0 3px 10px #212625;
+  box-shadow: 0 3px 10px $dark-grey;
   cursor: grab;
 }
 
@@ -80,13 +89,13 @@ h1 {
   text-transform: capitalize;
   font-weight: bold;
   color: #212625;
-  text-shadow: 0.5px 0.5px 0.5px #efefef;
+  text-shadow: 0.5px 0.5px 0.5px $light-grey;
 }
 
 .card-container p.back-p {
   color: #efefef;
   line-height: 0.7rem;
-  text-shadow: 0.5px 0.5px 0.5px #212625;
+  text-shadow: 0.5px 0.5px 0.5px $dark-grey;
 }
 
 .card-container h3 {
@@ -94,7 +103,7 @@ h1 {
   font-size: 1.5rem;
   text-transform: capitalize;
   color: #212625;
-  text-shadow: 0.5px 0.5px 0.5px #efefef;
+  text-shadow: 0.5px 0.5px 0.5px $light-grey;
 }
 
 .detail-wrapper {
@@ -122,12 +131,12 @@ h1 {
 }
 
 .load-button {
-  background: #212625;
+  background: $dark-grey;
   border-radius: 0.2rem;
-  border: 1px solid #fafafa;
+  border: 1px solid $light-grey;
   font-weight: bolder;
   width: 40%;
-  color: #fafafa;
+  color: $light-grey;
   padding: 0.5rem 1.5rem;
   min-width: 20%;
   margin-top: 1rem;
@@ -141,4 +150,26 @@ h1 {
 // For Flippy
 .flippy-front, .flippy-back {
   padding: 0rem !important;
+  box-shadow: none !important;
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .card-container {
+    min-width: 140px;
+  }
+  .controls-container {
+  display: flex;
+  width: 100%;
+  }
+  .load-button {
+  width: 100px;
+  padding: 0.6rem 0.6rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
 }
