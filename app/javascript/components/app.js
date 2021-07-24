@@ -36,6 +36,7 @@ const ref = useRef();
 return (
   <div className="app-container">
     <h1>WELCOME TO POKÉDEX</h1>
+    <h3>Click or touch to get details</h3>
     <div className="index-container">
       <div className="pokemon-container">
         {allPokemons.map((pokemon, index) =>
