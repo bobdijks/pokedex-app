@@ -14,7 +14,7 @@ const counterLess = () => {
   setCounter(counter - 1)
 }
 
-const [allPokemons, setAllPokemons] = useState([])
+const [allPokemons, setAllPokemons] = useState([`api/v1/pokemons/?page=1`])
 const [loadMore, setLoadMore] = useState(`api/v1/pokemons/?page=${counter}`)
 
 const getAllPokemons = async () => {
@@ -26,7 +26,7 @@ const getAllPokemons = async () => {
 
 useEffect(() => {
   getAllPokemons()
-})
+}, []);
 
 return (
   <div className="app-container">
@@ -48,13 +48,13 @@ return (
       </div>
       <div className="controls-container">
         <button className="load-button" onClick={() => {
-          getAllPokemons()
           counterLess()
+          getAllPokemons()
         }}
         >Previous page</button>
         <button className="load-button" onClick={() => {
-          getAllPokemons()
           counterMore()
+          getAllPokemons()
         }}
         >Next page</button>
       </div>
