@@ -46,6 +46,20 @@ body {
   box-shadow: 0 3px 10px #212625;
 }
 
+.card-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+  margin: 0.3rem;
+  border: 0.15rem solid #efefef;
+  border-radius: 0.3rem;
+  min-width: 160px;
+  text-align: center;
+  box-shadow: 0 3px 10px #212625;
+}
+
 h1 {
   color: #efefef;
   text-shadow: 1px 1px 1px #212625;
@@ -98,7 +112,7 @@ h3 {
   background-color: rgba(0, 0, 0, 0.185);
 }
 
-.load-more {
+.load-button {
   background: #212625;
   border-radius: 0.2rem;
   border: 1px solid #fafafa;
@@ -109,8 +123,45 @@ h3 {
   margin-top: 1rem;
 }
 
-.load-more:hover {
+.load-button:hover {
   background: #d22600;
   border-radius: 0.2rem;
 }
 
+.controls-container {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+// Card flip effect
+.card__inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.card__inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.card_face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 16;
+  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
