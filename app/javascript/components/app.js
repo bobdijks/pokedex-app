@@ -1,6 +1,8 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import PokemonCard from './pokemonCard';
+import { useRef } from 'react';
+import Flippy, { FrontSide, BackSide } from 'react-flippy';
 
 function App() {
 
