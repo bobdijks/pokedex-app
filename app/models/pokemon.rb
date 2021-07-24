@@ -5,4 +5,5 @@ class Pokemon < ApplicationRecord
   validates :weight, presence: true
   validates :photo_url, presence: true
   validates :height, presence: true
+  paginates_per 20
 end
