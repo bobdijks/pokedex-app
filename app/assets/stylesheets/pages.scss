@@ -6,6 +6,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  color: #efefef;
+  text-shadow: 1px 1px 1px #212625;
+}
+
 .app-container {
   display: flex;
   background: url('pokeball.png');
@@ -42,34 +47,10 @@ body {
   border: 0.15rem solid #efefef;
   border-radius: 0.3rem;
   min-width: 160px;
+  height: 100%;
   text-align: center;
   box-shadow: 0 3px 10px #212625;
-}
-
-.card-back {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem 0;
-  margin: 0.3rem;
-  border: 0.15rem solid #efefef;
-  border-radius: 0.3rem;
-  min-width: 160px;
-  text-align: center;
-  box-shadow: 0 3px 10px #212625;
-}
-
-h1 {
-  color: #efefef;
-  text-shadow: 1px 1px 1px #212625;
-}
-
-h3 {
-  margin-bottom: 0.2rem;
-  font-size: 1.5rem;
-  text-transform: capitalize;
-  color: #212625;
+  cursor: grab;
 }
 
 .card-container .number {
@@ -84,15 +65,36 @@ h3 {
   margin-top: 0.7rem;
 }
 
-.card-container img {
+.card-container img.front {
   width: 100px;
   height: 100px;
+}
+
+.card-container img.back {
+  width: 50px;
+  height: 50px;
+  margin-top: 2rem;
 }
 
 .card-container p {
   text-transform: capitalize;
   font-weight: bold;
-  color: #212625
+  color: #212625;
+  text-shadow: 0.5px 0.5px 0.5px #efefef;
+}
+
+.card-container p.back-p {
+  color: #efefef;
+  line-height: 0.7rem;
+  text-shadow: 0.5px 0.5px 0.5px #212625;
+}
+
+.card-container h3 {
+  margin-bottom: 0.2rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #212625;
+  text-shadow: 0.5px 0.5px 0.5px #efefef;
 }
 
 .detail-wrapper {
@@ -134,34 +136,7 @@ h3 {
   width: 30%;
 }
 
-// Card flip effect
-.card__inner {
-  width: 100%;
-  height: 100%;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-  cursor: pointer;
-}
-
-.card__inner.is-flipped {
-  transform: rotateY(180deg);
-}
-
-.card__inner {
-  width: 100%;
-  height: 100%;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-  cursor: pointer;
-}
-
-.card_face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  overflow: hidden;
-  border-radius: 16;
-  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+// For Flippy
+.flippy-front, .flippy-back {
+  padding: 0rem !important;
 }
