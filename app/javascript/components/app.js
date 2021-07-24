@@ -1,6 +1,9 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import PokemonCard from './pokemonCard';
+import PokemonCardFront from './pokemonCardFront';
+import PokemonCardBack from './pokemonCardBack';
+import { useRef } from 'react';
+import Flippy, { FrontSide, BackSide } from 'react-flippy';
 
 function App() {
 
@@ -28,22 +31,45 @@ useEffect(() => {
   getAllPokemons()
 }, []);
 
+const ref = useRef();
+
 return (
   <div className="app-container">
     <h1>WELCOME TO POKÉDEX</h1>
     <div className="index-container">
       <div className="pokemon-container">
-          {allPokemons.map((pokemon, index) =>
-          <PokemonCard
-          id={pokemon.id}
-          name={pokemon.name}
-          image={pokemon.photo_url}
-          type={pokemon.pokemon_type}
-          ability={pokemon.ability}
-          height={pokemon.height}
-          weight={pokemon.weight}
-          key={index}
-          />
+        {allPokemons.map((pokemon, index) =>
+          <Flippy
+            flipOnHover={false}
+            flipOnClick={true}
+            flipDirection="horizontal"
+            ref={ref}
+          >
+            <FrontSide>
+              <PokemonCardFront
+                id={pokemon.id}
+                name={pokemon.name}
+                image={pokemon.photo_url}
+                type={pokemon.pokemon_type}
+                ability={pokemon.ability}
+                height={pokemon.height}
+                weight={pokemon.weight}
+                key={index}
+              />
+            </FrontSide>
+            <BackSide>
+              <PokemonCardBack
+                id={pokemon.id}
+                name={pokemon.name}
+                image={pokemon.photo_url}
+                type={pokemon.pokemon_type}
+                ability={pokemon.ability}
+                height={pokemon.height}
+                weight={pokemon.weight}
+                key={index}
+              />
+            </BackSide>
+          </Flippy>
         )}
       </div>
       <div className="controls-container">
@@ -60,7 +86,7 @@ return (
       </div>
     </div>
   </div>
-  );
+  )
 }
 
 export default App;
