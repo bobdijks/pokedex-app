@@ -14,6 +14,7 @@ const counterMore = () => {
 }
 
 const counterLess = () => {
+  if (counter > 2)
   setCounter(counter - 1)
 }
 
@@ -48,6 +49,7 @@ return (
             flipOnClick={true}
             flipDirection="horizontal"
             ref={ref}
+            key={index}
           >
             <FrontSide>
               <PokemonCardFront
