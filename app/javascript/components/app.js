@@ -17,7 +17,9 @@ const counterLess = () => {
   setCounter(counter - 1)
 }
 
-const [allPokemons, setAllPokemons] = useState([`api/v1/pokemons/?page=1`])
+const [searchTerm, setSearchTerm] = useState('')
+
+const [allPokemons, setAllPokemons] = useState([])
 const [loadMore, setLoadMore] = useState(`api/v1/pokemons/?page=${counter}`)
 
 const getAllPokemons = async () => {
@@ -36,6 +38,7 @@ const ref = useRef();
 return (
   <div className="app-container">
     <h1>WELCOME TO POKÉDEX</h1>
+    <input type="text" placeholder="Find your favorite Pokémon" onChange={event => {setSearchTerm(event.target.value)}}/>
     <h3>Click or touch to get details</h3>
     <div className="index-container">
       <div className="pokemon-container">

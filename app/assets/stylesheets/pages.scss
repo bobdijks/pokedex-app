@@ -20,6 +20,13 @@ h3 {
   text-shadow: 0.2px 0.2px 0.2px $light-grey;
 }
 
+input {
+  width: 350px;
+  padding: 1rem 1rem;
+  text-align: center;
+  font-weight: bolder;
+}
+
 .app-container {
   display: flex;
   background: url('pokeball.png');
@@ -52,11 +59,10 @@ h3 {
   align-items: center;
   justify-content: center;
   padding: 1.5rem 0;
-  margin: 0.5rem;
   border: 0.15rem solid $light-grey;
   border-radius: 0.3rem;
   min-width: 160px;
-  height: 100%;
+  max-height: 330px;
   text-align: center;
   box-shadow: 0 3px 10px $dark-grey;
   cursor: grab;
@@ -80,8 +86,8 @@ h3 {
 }
 
 .card-container img.back {
-  width: 50px;
-  height: 50px;
+  width: 43px;
+  height: 43px;
   margin-top: 2rem;
 }
 
@@ -149,7 +155,6 @@ h3 {
 
 // For Flippy
 .flippy-front, .flippy-back {
-  padding: 0rem !important;
   box-shadow: none !important;
 }
 
