@@ -8,7 +8,7 @@ import Flippy, { FrontSide, BackSide } from 'react-flippy';
 function App() {
 
 const [counter, setCounter] = useState(1)
-  const [allPokemons, setAllPokemons] = useState(['api/v1/pokemons/?page=1']);
+  const [allPokemons, setAllPokemons] = useState([]);
 
 const getAllPokemons = async () => {
   if (counter < 5)
