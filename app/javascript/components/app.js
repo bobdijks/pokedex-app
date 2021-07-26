@@ -8,7 +8,7 @@ import Flippy, { FrontSide, BackSide } from 'react-flippy';
 function App() {
 
 const [counter, setCounter] = useState(1)
-const [allPokemons, setAllPokemons] = useState([]);
+  const [allPokemons, setAllPokemons] = useState(['api/v1/pokemons/?page=1']);
 
 const getAllPokemons = async () => {
   if (counter < 5)
@@ -34,13 +34,12 @@ const ref = useRef();
 return (
   <div className="app-container">
     <h1>WELCOME TO POKÉDEX</h1>
-    <h3>Click or touch to get details</h3>
     <div className="index-container">
       <div className="pokemon-container">
         {allPokemons.map((pokemon, index) =>
           <Flippy
-            flipOnHover={false}
-            flipOnClick={true}
+            flipOnHover={true}
+            flipOnClick={false}
             flipDirection="horizontal"
             ref={ref}
             key={index}
