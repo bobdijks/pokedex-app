@@ -8,24 +8,21 @@ import Flippy, { FrontSide, BackSide } from 'react-flippy';
 function App() {
 
 const [counter, setCounter] = useState(1)
-const counterMore = () => {
-  if (counter < 5)
-  setCounter(counter + 1)
-}
-
-const counterLess = () => {
-  if (counter > 1)
-  setCounter(counter - 1)
-}
-
 const [allPokemons, setAllPokemons] = useState([]);
-const [loadMore, setLoadMore] = useState(`api/v1/pokemons/`);
 
 const getAllPokemons = async () => {
-  const res = await fetch(loadMore)
+  if (counter < 5)
+  setCounter(counter + 1 )
+  const res = await fetch(`api/v1/pokemons/?page=${counter}`)
   const data = await res.json()
   setAllPokemons(data)
-  setLoadMore(`api/v1/pokemons/?page=${counter}`)
+}
+
+const jumpBack = async () => {
+  const res = await fetch('api/v1/pokemons/?page=1')
+  const data = await res.json()
+  setAllPokemons(data)
+  setCounter(2)
 }
 
 useEffect(() => {
@@ -71,15 +68,13 @@ return (
       </div>
       <div className="controls-container">
         <button className="load-button" onClick={() => {
-          counterLess()
-          getAllPokemons()
+          jumpBack()
         }}
-        >Previous page</button>
+        >Back to start</button>
         <button className="load-button" onClick={() => {
-          counterMore()
           getAllPokemons()
         }}
-        >Next page</button>
+        >More Pokémon</button>
       </div>
     </div>
   </div>
